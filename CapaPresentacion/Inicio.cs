@@ -19,8 +19,12 @@ namespace CapaPresentacion
 		private static IconMenuItem MenuActivo = null;
 		private static Form FormularioActivo = null;
 
-		public Inicio(Usuario objusuario)
+		public Inicio(Usuario objusuario = null)
 		{
+			if (objusuario == null) 
+				usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", idUsuario = 1 };
+			else
+
 			usuarioActual = objusuario;
 
 			InitializeComponent();
@@ -37,19 +41,9 @@ namespace CapaPresentacion
 				if (encontrado==false)
 				{
 					iconmenu.Visible = false;
-
 				}
-
-
-
-
 			}
-
-
-
-
 			lblUsuario.Text = usuarioActual.NombreCompleto;
-
 		}
 
 		private void AbrirFormulario(IconMenuItem menu, Form formulario) 
