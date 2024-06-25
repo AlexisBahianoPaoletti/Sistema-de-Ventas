@@ -126,3 +126,43 @@
 
 --GO
 
+--CREATE PROC SP_ELIMINARUSUARIO(
+--@IdUsuario int,
+--@Respuesta bit output,
+--@Mensaje varchar(500) output
+--)
+--as
+--begin
+--	set @Respuesta = 0
+--	set @Mensaje = ''
+--	declare @pasoreglas bit = 1
+
+--	if exists (select * from COMPRA c
+--	inner join USUARIO u on u.IdUsuario = c.IdUsuario
+--	where u.IdUsuario = @IdUsuario
+--	)
+--	begin
+--		set @pasoreglas = 0
+--		set @Respuesta = 0
+--		set @Mensaje = @Mensaje + 'No se puede eliminar porque el usuario se encuentra relacionado a una compra\n'
+--	end
+
+--	if exists (select * from VENTA v
+--	inner join USUARIO u on u.IdUsuario = v.IdUsuario
+--	where u.IdUsuario = @IdUsuario
+--	)
+--	begin
+--		set @pasoreglas = 0
+--		set @Respuesta = 0
+--		set @Mensaje = @Mensaje + 'No se puede eliminar porque el usuario se encuentra relacionado a una venta\n'
+--	end
+
+--	if(@pasoreglas = 1)
+--	begin
+--		delete from USUARIO where IdUsuario = @IdUsuario
+--		set @Respuesta = 1
+--	end
+--end
+
+--GO
+
