@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -207,15 +207,15 @@
 			// dgvdata
 			// 
 			this.dgvdata.AllowUserToAddRows = false;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -232,9 +232,9 @@
 			this.dgvdata.MultiSelect = false;
 			this.dgvdata.Name = "dgvdata";
 			this.dgvdata.ReadOnly = true;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-			this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+			this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvdata.RowTemplate.Height = 28;
 			this.dgvdata.Size = new System.Drawing.Size(840, 397);
 			this.dgvdata.TabIndex = 18;
@@ -312,10 +312,12 @@
 			// label9
 			// 
 			this.label9.BackColor = System.Drawing.Color.White;
+			this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(207, 9);
+			this.label9.Location = new System.Drawing.Point(212, 9);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(845, 73);
+			this.label9.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			this.label9.Size = new System.Drawing.Size(840, 73);
 			this.label9.TabIndex = 19;
 			this.label9.Text = "Lista de Usuarios";
 			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,6 +330,7 @@
 			this.txtid.TabIndex = 20;
 			this.txtid.Text = "0";
 			this.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtid.Visible = false;
 			// 
 			// label10
 			// 
@@ -373,6 +376,7 @@
 			this.btnlimpiarbuscador.Text = "Limpiar";
 			this.btnlimpiarbuscador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnlimpiarbuscador.UseVisualStyleBackColor = false;
+			this.btnlimpiarbuscador.Click += new System.EventHandler(this.btnlimpiarbuscador_Click);
 			// 
 			// btnbuscar
 			// 
@@ -393,6 +397,7 @@
 			this.btnbuscar.Text = "Buscar";
 			this.btnbuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnbuscar.UseVisualStyleBackColor = false;
+			this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
 			// 
 			// btneliminar
 			// 
@@ -413,6 +418,7 @@
 			this.btneliminar.Text = "Eliminar";
 			this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btneliminar.UseVisualStyleBackColor = false;
+			this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
 			// 
 			// btnlimpiar
 			// 
@@ -463,6 +469,7 @@
 			this.txtIndice.TabIndex = 26;
 			this.txtIndice.Text = "-1";
 			this.txtIndice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtIndice.Visible = false;
 			// 
 			// frmUsuario
 			// 
