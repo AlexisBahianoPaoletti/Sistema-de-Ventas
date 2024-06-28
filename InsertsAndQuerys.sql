@@ -166,3 +166,64 @@
 
 --GO
 
+--CREATE PROC SP_RegistrarCategoria(
+--@Descripcion varchar(50),
+--@Estado bit,
+--@Resultado int output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 0
+--	IF NOT EXISTS (select * from CATEGORIA where Descripcion = @Descripcion)
+--	begin
+--		insert into CATEGORIA(Descripcion,Estado) values (@Descripcion,@Estado)
+--		set @Resultado = SCOPE_IDENTITY()
+--	end
+--	ELSE
+--		set @Mensaje = 'No se puede repetir la descripción de una categoría.'
+--end
+
+--GO
+
+--CREATE PROC SP_EditarCategoria(
+--@IdCategoria int,
+--@Descripcion varchar(50),
+--@Estado bit,
+--@Resultado bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 1
+--	IF NOT EXISTS (select * from CATEGORIA where Descripcion = @Descripcion and IdCategoria != @IdCategoria)
+--		Update CATEGORIA set Descripcion = @Descripcion, Estado = @Estado where IdCategoria = @IdCategoria
+--	ELSE
+--	begin
+--		set @Resultado = 0
+--		set @Mensaje = 'No se puede repetir la descripción de una categoría.'
+--	end
+--end
+
+--GO
+
+--CREATE PROC SP_EliminarCategoria(
+--@IdCategoria int,
+--@Resultado bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 1
+--	IF NOT EXISTS (
+--	select * from CATEGORIA c inner join PRODUCTO p on p.IdCategoria = c.IdCategoria
+--	where c.IdCategoria = @IdCategoria)
+--	begin
+--		Delete Top(1) from CATEGORIA where IdCategoria = @IdCategoria
+--	end		
+--	ELSE
+--	begin
+--		set @Resultado = 0
+--		set @Mensaje = 'No se puede eliminar la categoría porque se encuentra relacionada a un producto.'
+--	end
+--end
+
+--GO
+

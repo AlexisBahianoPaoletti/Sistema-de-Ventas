@@ -235,6 +235,7 @@ namespace CapaPresentacion
 					if (respuesta)
 					{
 						dgvdata.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+						Limpiar();
 
 					}
 					else
@@ -243,11 +244,13 @@ namespace CapaPresentacion
 
 					}
 
-
-
-
 				}
 			}
+		}
+
+		private void btnlimpiar_Click(object sender, EventArgs e)
+		{
+			Limpiar();
 		}
 
 		private void btnbuscar_Click(object sender, EventArgs e)
@@ -275,5 +278,7 @@ namespace CapaPresentacion
 				row.Visible = true;
 			}
 		}
+
+
 	}
 }
