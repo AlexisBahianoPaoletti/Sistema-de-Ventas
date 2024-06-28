@@ -506,7 +506,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "frmUsuario";
-			this.Text = "Usuario";
+			this.Text = "Usuarios";
 			this.Load += new System.EventHandler(this.frmUsuario_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
 			this.ResumeLayout(false);

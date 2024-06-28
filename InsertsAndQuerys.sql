@@ -227,3 +227,93 @@
 
 --GO
 
+--CREATE PROC SP_RegistrarProducto(
+--@Codigo varchar(20),
+--@Nombre varchar(30),
+--@Descripcion varchar(30),
+--@IdCategoria int,
+--@Estado bit,
+--@Resultado int output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	Set @Resultado = 0
+--	If Not Exists (select * from PRODUCTO where Codigo = @Codigo)
+--	begin
+--		insert into PRODUCTO(Codigo,Nombre,Descripcion,IdCategoria,Estado) values (@Codigo,@Nombre,@Descripcion,@IdCategoria,@Estado)
+--		set @Resultado = SCOPE_IDENTITY()
+--	end
+--	Else
+--		set @Mensaje = 'Ya existe un producto con el mismo código'
+
+--end
+
+--Go
+
+--CREATE PROC SP_EditarProducto(
+--@IdProducto int,
+--@Codigo varchar(20),
+--@Nombre varchar(30),
+--@Descripcion varchar(30),
+--@IdCategoria int,
+--@Estado bit,
+--@Resultado bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	Set @Resultado = 1
+--	If Not Exists (select * from PRODUCTO where Codigo = @Codigo and IdProducto != @IdProducto)
+--		update PRODUCTO set
+--		Codigo = @Codigo,
+--		Nombre = @Nombre,
+--		Descripcion = @Descripcion,
+--		IdCategoria = @IdCategoria,
+--		Estado = @Estado
+--		where IdProducto = @IdProducto
+--	Else
+--	begin
+--		set @Resultado = 0
+--		set @Mensaje = 'Ya existe un producto con el mismo código'
+--	end
+--end
+
+--GO
+
+--CREATE PROC SP_EliminarProducto(
+--@IdProducto int,
+--@Respuesta bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	set @Respuesta = 0
+--	set @Mensaje = ''
+--	declare @pasoreglas bit = 1
+
+--	If Exists (select * from DETALLE_COMPRA dc
+--	inner join PRODUCTO p on p.IdProducto = dc.IdProducto
+--	where p.IdProducto = @IdProducto)
+--	begin
+--		set @pasoreglas = 0
+--		set @Respuesta = 0
+--		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacionado a una compra\n'
+--	end
+
+--	If Exists (select * from DETALLE_VENTA dv
+--	inner join PRODUCTO p on p.IdProducto = dv.IdProducto
+--	where p.IdProducto = @IdProducto)
+--	begin
+--		set @pasoreglas = 0
+--		set @Respuesta = 0
+--		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacionado a una venta\n'
+--	end
+
+--	If(@pasoreglas = 1)
+--	begin
+--		delete from PRODUCTO where IdProducto = @IdProducto
+--		set @Respuesta = 1
+--	end
+
+--end
+
+--GO
+
