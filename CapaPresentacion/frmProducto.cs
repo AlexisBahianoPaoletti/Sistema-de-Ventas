@@ -1,6 +1,7 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Utilidades;
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -277,5 +278,64 @@ namespace CapaPresentacion
 				row.Visible = true;
 			}
 		}
+
+		private void iconButton1_Click(object sender, EventArgs e)
+		{
+			if (dgvdata.Rows.Count < 1)
+			{
+				MessageBox.Show("No hay datos para exportar.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}
+			else
+			{
+				DataTable dt = new DataTable();
+
+				foreach (DataGridViewColumn column in dgvdata.Columns)
+				{
+					if (column.HeaderText != "" && column.Visible)
+						dt.Columns.Add(column.HeaderText, typeof(string));
+				}
+
+				foreach (DataGridViewRow row in dgvdata.Rows)
+				{
+					if(row.Visible)
+						dt.Rows.Add(new object[]
+						{
+							row.Cells[2].Value.ToString(),
+							row.Cells[3].Value.ToString(),
+							row.Cells[4].Value.ToString(),						
+							row.Cells[6].Value.ToString(),
+							row.Cells[7].Value.ToString(),
+							row.Cells[8].Value.ToString(),
+							row.Cells[9].Value.ToString(),
+							row.Cells[11].Value.ToString(),
+
+						});
+				}
+
+				SaveFileDialog savefile = new SaveFileDialog();
+				savefile.FileName = string.Format("ReporteProducto_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+				savefile.Filter = "Excel Files | *.xlsx";
+
+				if (savefile.ShowDialog() == DialogResult.OK)
+				{
+					try
+					{
+						XLWorkbook wb = new XLWorkbook();
+						var hoja = wb.Worksheets.Add(dt, "Informe");
+						hoja.ColumnsUsed().AdjustToContents();
+						wb.SaveAs(savefile.FileName);
+						MessageBox.Show("Reporte generado.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					}
+					catch 
+					{
+						MessageBox.Show("Error al generar el reporte.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+						
+					}
+				}
+
+			}
+		}
+
+
 	}
 }
