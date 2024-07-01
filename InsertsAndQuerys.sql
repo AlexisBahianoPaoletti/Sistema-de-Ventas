@@ -317,3 +317,61 @@
 
 --GO
 
+--CREATE PROC SP_RegistrarCliente(
+--@Documento varchar(50),
+--@NombreCompleto varchar(50),
+--@Correo varchar(50),
+--@Telefono varchar(50),
+--@Estado bit,
+--@Resultado int output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 0
+--	Declare @IDPERSONA int
+--	IF NOT EXISTS (select * from CLIENTE where Documento = @Documento)
+--	begin
+--		insert into CLIENTE(Documento,NombreCompleto,Correo,Telefono,Estado) 
+--		values (@Documento,@NombreCompleto,@Correo,@Telefono,@Estado)
+--		set @Resultado = SCOPE_IDENTITY()
+--	end
+--	ELSE
+--		set @Mensaje = 'El número de documento ya existe.'
+--end
+
+--GO
+
+--CREATE PROC SP_EditarCliente(
+--@IdCliente int,
+--@Documento varchar(50),
+--@NombreCompleto varchar(50),
+--@Correo varchar(50),
+--@Telefono varchar(50),
+--@Estado bit,
+--@Resultado bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 1
+--	Declare @IDPERSONA int
+--	IF NOT EXISTS (select * from CLIENTE where Documento = @Documento and IdCliente != @IdCliente)
+--	begin
+--		Update CLIENTE set 
+--		Documento = @Documento,
+--		NombreCompleto = @NombreCompleto,
+--		Correo = @Correo,
+--		Telefono = @Telefono,
+--		Estado = @Estado 
+--		where IdCliente = @IdCliente
+--	end
+--	ELSE
+--	begin
+--		set @Resultado = 0
+--		set @Mensaje = 'El número de documento ya existe.'
+--	end
+--end
+
+--GO
+
+--select IdCliente,Documento,NombreCompleto,Correo,Telefono,Estado from CLIENTE
+
