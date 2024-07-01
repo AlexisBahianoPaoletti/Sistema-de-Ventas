@@ -375,3 +375,87 @@
 
 --select IdCliente,Documento,NombreCompleto,Correo,Telefono,Estado from CLIENTE
 
+--GO
+
+--CREATE PROC SP_RegistrarProveedor(
+--@Documento varchar(50),
+--@RazonSocial varchar(50),
+--@Correo varchar(50),
+--@Telefono varchar(50),
+--@Estado bit,
+--@Resultado int output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 0
+--	Declare @IDPERSONA int
+--	IF NOT EXISTS (select * from PROVEEDOR where Documento = @Documento)
+--	begin
+--		insert into PROVEEDOR(Documento,RazonSocial,Correo,Telefono,Estado) 
+--		values (@Documento,@RazonSocial,@Correo,@Telefono,@Estado)
+--		set @Resultado = SCOPE_IDENTITY()
+--	end
+--	ELSE
+--		set @Mensaje = 'El número de documento ya existe.'
+--end
+
+--GO
+
+--CREATE PROC SP_EditarProveedor(
+--@IdProveedor int,
+--@Documento varchar(50),
+--@RazonSocial varchar(50),
+--@Correo varchar(50),
+--@Telefono varchar(50),
+--@Estado bit,
+--@Resultado bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	SET @Resultado = 1
+--	Declare @IDPERSONA int
+--	IF NOT EXISTS (select * from PROVEEDOR where Documento = @Documento and IdProveedor != @IdProveedor)
+--	begin
+--		Update PROVEEDOR set 
+--		Documento = @Documento,
+--		RazonSocial = @RazonSocial,
+--		Correo = @Correo,
+--		Telefono = @Telefono,
+--		Estado = @Estado 
+--		where IdProveedor = @IdProveedor
+--	end
+--	ELSE
+--	begin
+--		set @Resultado = 0
+--		set @Mensaje = 'El número de documento ya existe.'
+--	end
+--end
+
+--GO
+
+--CREATE PROC SP_EliminarProveedor(
+--@IdProveedor int,
+--@Resultado bit output,
+--@Mensaje varchar(500) output
+--)as
+--begin
+--	set @Resultado = 1
+
+--	If Not Exists (select * from PROVEEDOR p
+--	inner join COMPRA c on p.IdProveedor = c.IdProveedor
+--	where p.IdProveedor = @IdProveedor)
+--	begin
+--		delete top(1) from PROVEEDOR where IdProveedor = @IdProveedor
+--	end
+--	Else
+--	begin
+--		set @Resultado = 0
+--		set @Mensaje = 'No se puede eliminar el proveedor porque se encuentra relacionado a una compra.'
+--	end
+
+--end
+
+--GO
+
+--select IdProveedor,Documento,RazonSocial,Correo,Telefono,Estado from PROVEEDOR
+
