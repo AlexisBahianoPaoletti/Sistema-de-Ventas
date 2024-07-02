@@ -459,3 +459,36 @@
 
 --select IdProveedor,Documento,RazonSocial,Correo,Telefono,Estado from PROVEEDOR
 
+GO
+
+CREATE TABLE DETALLE_VENTA(
+IdDetalleVenta int primary key identity,
+IdVenta int references VENTA(IdVenta),
+IdProducto int references PRODUCTO(IdProducto),
+PrecioVenta decimal(10,2),
+Cantidad int,
+SubTotal decimal(10,2),
+FechaRegistro datetime default getdate()
+)
+
+--GO
+
+--CREATE TABLE NEGOCIO(
+--IdNegocio int primary key,
+--Nombre varchar(60),
+--RUC varchar(60),
+--Direccion varchar(60),
+--Logo varbinary(max) NULL
+--)
+
+--GO
+
+--Insert into NEGOCIO (IdNegocio,Nombre,RUC,Direccion)
+--values (1,'APICULTURA PAB','201100','Salvador María')
+
+--GO
+
+--select * from NEGOCIO 
+
+--GO
+
