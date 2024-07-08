@@ -32,9 +32,6 @@
 			this.cbobusqueda = new System.Windows.Forms.ComboBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.dgvdata = new System.Windows.Forms.DataGridView();
-			this.label9 = new System.Windows.Forms.Label();
-			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
-			this.btnbuscar = new FontAwesome.Sharp.IconButton();
 			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,9 @@
 			this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label9 = new System.Windows.Forms.Label();
+			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
+			this.btnbuscar = new FontAwesome.Sharp.IconButton();
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -93,6 +93,55 @@
 			this.dgvdata.Size = new System.Drawing.Size(643, 343);
 			this.dgvdata.TabIndex = 30;
 			this.dgvdata.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellDoubleClick);
+			// 
+			// Id
+			// 
+			this.Id.HeaderText = "Id";
+			this.Id.Name = "Id";
+			this.Id.ReadOnly = true;
+			this.Id.Visible = false;
+			// 
+			// Codigo
+			// 
+			this.Codigo.HeaderText = "Código";
+			this.Codigo.Name = "Codigo";
+			this.Codigo.ReadOnly = true;
+			this.Codigo.Width = 150;
+			// 
+			// Nombre
+			// 
+			this.Nombre.HeaderText = "Nombre";
+			this.Nombre.Name = "Nombre";
+			this.Nombre.ReadOnly = true;
+			this.Nombre.Width = 300;
+			// 
+			// Categoria
+			// 
+			this.Categoria.HeaderText = "Categoría";
+			this.Categoria.Name = "Categoria";
+			this.Categoria.ReadOnly = true;
+			this.Categoria.Width = 150;
+			// 
+			// Stock
+			// 
+			this.Stock.HeaderText = "Stock";
+			this.Stock.Name = "Stock";
+			this.Stock.ReadOnly = true;
+			this.Stock.Visible = false;
+			// 
+			// PrecioCompra
+			// 
+			this.PrecioCompra.HeaderText = "Precio Compra";
+			this.PrecioCompra.Name = "PrecioCompra";
+			this.PrecioCompra.ReadOnly = true;
+			this.PrecioCompra.Visible = false;
+			// 
+			// PrecioVenta
+			// 
+			this.PrecioVenta.HeaderText = "Precio Venta";
+			this.PrecioVenta.Name = "PrecioVenta";
+			this.PrecioVenta.ReadOnly = true;
+			this.PrecioVenta.Visible = false;
 			// 
 			// label9
 			// 
@@ -149,55 +198,6 @@
 			this.btnbuscar.UseVisualStyleBackColor = false;
 			this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
 			// 
-			// Id
-			// 
-			this.Id.HeaderText = "Id";
-			this.Id.Name = "Id";
-			this.Id.ReadOnly = true;
-			this.Id.Visible = false;
-			// 
-			// Codigo
-			// 
-			this.Codigo.HeaderText = "Código";
-			this.Codigo.Name = "Codigo";
-			this.Codigo.ReadOnly = true;
-			this.Codigo.Width = 150;
-			// 
-			// Nombre
-			// 
-			this.Nombre.HeaderText = "Nombre";
-			this.Nombre.Name = "Nombre";
-			this.Nombre.ReadOnly = true;
-			this.Nombre.Width = 300;
-			// 
-			// Categoria
-			// 
-			this.Categoria.HeaderText = "Categoría";
-			this.Categoria.Name = "Categoria";
-			this.Categoria.ReadOnly = true;
-			this.Categoria.Width = 150;
-			// 
-			// Stock
-			// 
-			this.Stock.HeaderText = "Stock";
-			this.Stock.Name = "Stock";
-			this.Stock.ReadOnly = true;
-			this.Stock.Visible = false;
-			// 
-			// PrecioCompra
-			// 
-			this.PrecioCompra.HeaderText = "Precio Compra";
-			this.PrecioCompra.Name = "PrecioCompra";
-			this.PrecioCompra.ReadOnly = true;
-			this.PrecioCompra.Visible = false;
-			// 
-			// PrecioVenta
-			// 
-			this.PrecioVenta.HeaderText = "Precio Venta";
-			this.PrecioVenta.Name = "PrecioVenta";
-			this.PrecioVenta.ReadOnly = true;
-			this.PrecioVenta.Visible = false;
-			// 
 			// mdProducto
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +211,7 @@
 			this.Controls.Add(this.dgvdata);
 			this.Controls.Add(this.label9);
 			this.Name = "mdProducto";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Productos";
 			this.Load += new System.EventHandler(this.mdProducto_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();

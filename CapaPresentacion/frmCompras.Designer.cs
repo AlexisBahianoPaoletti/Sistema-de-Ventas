@@ -40,8 +40,10 @@
 			this.txtdocproveedor = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.txtcantidad = new System.Windows.Forms.NumericUpDown();
+			this.btnbuscarproveedor = new FontAwesome.Sharp.IconButton();
 			this.label10 = new System.Windows.Forms.Label();
 			this.txtprecioventa = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.btnregistrar = new FontAwesome.Sharp.IconButton();
 			this.btnagregarproducto = new FontAwesome.Sharp.IconButton();
-			this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
-			this.btnbuscarproveedor = new FontAwesome.Sharp.IconButton();
 			this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -187,6 +187,27 @@
 			this.label4.TabIndex = 0;
 			this.label4.Text = "Número Documento:";
 			// 
+			// btnbuscarproducto
+			// 
+			this.btnbuscarproducto.BackColor = System.Drawing.Color.White;
+			this.btnbuscarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnbuscarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.btnbuscarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnbuscarproducto.ForeColor = System.Drawing.Color.Black;
+			this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+			this.btnbuscarproducto.IconColor = System.Drawing.Color.Black;
+			this.btnbuscarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnbuscarproducto.IconSize = 16;
+			this.btnbuscarproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnbuscarproducto.Location = new System.Drawing.Point(149, 20);
+			this.btnbuscarproducto.Name = "btnbuscarproducto";
+			this.btnbuscarproducto.Size = new System.Drawing.Size(74, 36);
+			this.btnbuscarproducto.TabIndex = 25;
+			this.btnbuscarproducto.Text = "Buscar";
+			this.btnbuscarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnbuscarproducto.UseVisualStyleBackColor = false;
+			this.btnbuscarproducto.Click += new System.EventHandler(this.btnbuscarproducto_Click);
+			// 
 			// groupBox3
 			// 
 			this.groupBox3.BackColor = System.Drawing.Color.White;
@@ -231,6 +252,27 @@
             0,
             0,
             0});
+			// 
+			// btnbuscarproveedor
+			// 
+			this.btnbuscarproveedor.BackColor = System.Drawing.Color.White;
+			this.btnbuscarproveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnbuscarproveedor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.btnbuscarproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnbuscarproveedor.ForeColor = System.Drawing.Color.Black;
+			this.btnbuscarproveedor.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+			this.btnbuscarproveedor.IconColor = System.Drawing.Color.Black;
+			this.btnbuscarproveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnbuscarproveedor.IconSize = 16;
+			this.btnbuscarproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnbuscarproveedor.Location = new System.Drawing.Point(246, 44);
+			this.btnbuscarproveedor.Name = "btnbuscarproveedor";
+			this.btnbuscarproveedor.Size = new System.Drawing.Size(73, 36);
+			this.btnbuscarproveedor.TabIndex = 25;
+			this.btnbuscarproveedor.Text = "Buscar";
+			this.btnbuscarproveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnbuscarproveedor.UseVisualStyleBackColor = false;
+			this.btnbuscarproveedor.Click += new System.EventHandler(this.btnbuscarproveedor_Click);
 			// 
 			// label10
 			// 
@@ -294,6 +336,7 @@
 			this.txtcodproducto.Name = "txtcodproducto";
 			this.txtcodproducto.Size = new System.Drawing.Size(124, 20);
 			this.txtcodproducto.TabIndex = 2;
+			this.txtcodproducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcodproducto_KeyDown);
 			// 
 			// label5
 			// 
@@ -331,6 +374,7 @@
 			this.dgvdata.ReadOnly = true;
 			this.dgvdata.Size = new System.Drawing.Size(690, 343);
 			this.dgvdata.TabIndex = 24;
+			this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
 			// 
 			// txttotalpagar
 			// 
@@ -383,48 +427,7 @@
 			this.btnagregarproducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.btnagregarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnagregarproducto.UseVisualStyleBackColor = true;
-			// 
-			// btnbuscarproducto
-			// 
-			this.btnbuscarproducto.BackColor = System.Drawing.Color.White;
-			this.btnbuscarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnbuscarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.btnbuscarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnbuscarproducto.ForeColor = System.Drawing.Color.Black;
-			this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
-			this.btnbuscarproducto.IconColor = System.Drawing.Color.Black;
-			this.btnbuscarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnbuscarproducto.IconSize = 16;
-			this.btnbuscarproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnbuscarproducto.Location = new System.Drawing.Point(149, 20);
-			this.btnbuscarproducto.Name = "btnbuscarproducto";
-			this.btnbuscarproducto.Size = new System.Drawing.Size(74, 36);
-			this.btnbuscarproducto.TabIndex = 25;
-			this.btnbuscarproducto.Text = "Buscar";
-			this.btnbuscarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnbuscarproducto.UseVisualStyleBackColor = false;
-			this.btnbuscarproducto.Click += new System.EventHandler(this.btnbuscarproducto_Click);
-			// 
-			// btnbuscarproveedor
-			// 
-			this.btnbuscarproveedor.BackColor = System.Drawing.Color.White;
-			this.btnbuscarproveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnbuscarproveedor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.btnbuscarproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnbuscarproveedor.ForeColor = System.Drawing.Color.Black;
-			this.btnbuscarproveedor.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
-			this.btnbuscarproveedor.IconColor = System.Drawing.Color.Black;
-			this.btnbuscarproveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnbuscarproveedor.IconSize = 16;
-			this.btnbuscarproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnbuscarproveedor.Location = new System.Drawing.Point(246, 44);
-			this.btnbuscarproveedor.Name = "btnbuscarproveedor";
-			this.btnbuscarproveedor.Size = new System.Drawing.Size(73, 36);
-			this.btnbuscarproveedor.TabIndex = 25;
-			this.btnbuscarproveedor.Text = "Buscar";
-			this.btnbuscarproveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnbuscarproveedor.UseVisualStyleBackColor = false;
-			this.btnbuscarproveedor.Click += new System.EventHandler(this.btnbuscarproveedor_Click);
+			this.btnagregarproducto.Click += new System.EventHandler(this.btnagregarproducto_Click);
 			// 
 			// IdProducto
 			// 
@@ -458,19 +461,21 @@
 			this.Cantidad.HeaderText = "Cantidad";
 			this.Cantidad.Name = "Cantidad";
 			this.Cantidad.ReadOnly = true;
+			this.Cantidad.Width = 65;
 			// 
 			// SubTotal
 			// 
 			this.SubTotal.HeaderText = "Sub Total";
 			this.SubTotal.Name = "SubTotal";
 			this.SubTotal.ReadOnly = true;
-			this.SubTotal.Width = 150;
+			this.SubTotal.Width = 135;
 			// 
 			// btneliminar
 			// 
 			this.btneliminar.HeaderText = "";
 			this.btneliminar.Name = "btneliminar";
 			this.btneliminar.ReadOnly = true;
+			this.btneliminar.Width = 50;
 			// 
 			// frmCompras
 			// 
