@@ -149,7 +149,6 @@ namespace CapaPresentacion
 				calcularTotal();
 				limpiarProducto();
 				txtcodproducto.Select();
-
 			}
 		}
 
