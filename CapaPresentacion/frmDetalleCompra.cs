@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,47 @@ namespace CapaPresentacion
 		public frmDetalleCompra()
 		{
 			InitializeComponent();
+		}
+
+		private void btnbuscar_Click(object sender, EventArgs e)
+		{
+			Compra oCompra = new CN_Compra().ObtenerCompra(txtbusqueda.Text);
+
+			if (oCompra.idCompra != 0)
+			{
+				txtnumerodocumento.Text = oCompra.NumeroDocumento;
+				txtfecha.Text = oCompra.FechaRegistro;
+				txttipodocumento.Text = oCompra.TipoDocumento;
+				txtusuario.Text = oCompra.oUsuario.NombreCompleto;
+				txtdocproveedor.Text = oCompra.oProveedor.Documento;
+				txtnombreproveedor.Text = oCompra.oProveedor.RazonSocial;
+
+				dgvdata.Rows.Clear();
+				foreach (Detalle_Compra dc in oCompra.oDetalleCompra)
+				{
+					dgvdata.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioCompra, dc.Cantidad, dc.MontoTotal });
+				}
+
+				txtmontototal.Text = oCompra.MontoTotal.ToString("0.00");
+			}
+		}
+
+		private void btnborrar_Click(object sender, EventArgs e)
+		{
+			txtbusqueda.Text = "";
+			txtfecha.Text = "";
+			txttipodocumento.Text = "";
+			txtusuario.Text = "";
+			txtdocproveedor.Text = "";
+			txtnombreproveedor.Text = "";
+			dgvdata.Rows.Clear();
+			txtmontototal.Text = "0,00";
+			txtbusqueda.Focus();
+		}
+
+		private void frmDetalleCompra_Load(object sender, EventArgs e)
+		{
+			txtbusqueda.Focus();
 		}
 	}
 }
