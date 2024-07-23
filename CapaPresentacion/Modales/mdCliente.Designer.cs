@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.Modales
 {
-	partial class mdProveedor
+	partial class mdCliente
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,16 +28,16 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label9 = new System.Windows.Forms.Label();
 			this.dgvdata = new System.Windows.Forms.DataGridView();
-			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
+			this.btnbuscar = new FontAwesome.Sharp.IconButton();
 			this.txtbusqueda = new System.Windows.Forms.TextBox();
 			this.cbobusqueda = new System.Windows.Forms.ComboBox();
 			this.label10 = new System.Windows.Forms.Label();
-			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
-			this.btnbuscar = new FontAwesome.Sharp.IconButton();
+			this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -48,77 +48,38 @@
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label9.Location = new System.Drawing.Point(12, 9);
 			this.label9.Name = "label9";
-			this.label9.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			this.label9.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
 			this.label9.Size = new System.Drawing.Size(642, 73);
-			this.label9.TabIndex = 20;
-			this.label9.Text = "Lista de Proveedores";
+			this.label9.TabIndex = 47;
+			this.label9.Text = "Lista de Clientes";
 			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// dgvdata
 			// 
 			this.dgvdata.AllowUserToAddRows = false;
 			this.dgvdata.BackgroundColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
             this.Documento,
-            this.RazonSocial});
-			this.dgvdata.Location = new System.Drawing.Point(12, 96);
+            this.NombreCompleto});
+			this.dgvdata.Location = new System.Drawing.Point(12, 85);
 			this.dgvdata.MultiSelect = false;
 			this.dgvdata.Name = "dgvdata";
 			this.dgvdata.ReadOnly = true;
-			this.dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-			this.dgvdata.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+			this.dgvdata.RowTemplate.Height = 28;
 			this.dgvdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvdata.Size = new System.Drawing.Size(642, 342);
-			this.dgvdata.TabIndex = 25;
+			this.dgvdata.Size = new System.Drawing.Size(642, 353);
+			this.dgvdata.TabIndex = 48;
 			this.dgvdata.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellDoubleClick);
-			// 
-			// Id
-			// 
-			this.Id.HeaderText = "Id";
-			this.Id.Name = "Id";
-			this.Id.ReadOnly = true;
-			this.Id.Visible = false;
-			// 
-			// Documento
-			// 
-			this.Documento.HeaderText = "Nro Documento";
-			this.Documento.Name = "Documento";
-			this.Documento.ReadOnly = true;
-			this.Documento.Width = 150;
-			// 
-			// RazonSocial
-			// 
-			this.RazonSocial.HeaderText = "Razón Social";
-			this.RazonSocial.Name = "RazonSocial";
-			this.RazonSocial.ReadOnly = true;
-			this.RazonSocial.Width = 449;
-			// 
-			// txtbusqueda
-			// 
-			this.txtbusqueda.Location = new System.Drawing.Point(365, 53);
-			this.txtbusqueda.Name = "txtbusqueda";
-			this.txtbusqueda.Size = new System.Drawing.Size(207, 20);
-			this.txtbusqueda.TabIndex = 28;
-			// 
-			// cbobusqueda
-			// 
-			this.cbobusqueda.FormattingEnabled = true;
-			this.cbobusqueda.Location = new System.Drawing.Point(365, 21);
-			this.cbobusqueda.Name = "cbobusqueda";
-			this.cbobusqueda.Size = new System.Drawing.Size(207, 21);
-			this.cbobusqueda.TabIndex = 27;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.BackColor = System.Drawing.Color.White;
-			this.label10.Location = new System.Drawing.Point(298, 24);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(61, 13);
-			this.label10.TabIndex = 26;
-			this.label10.Text = "Buscar por:";
 			// 
 			// btnlimpiarbuscador
 			// 
@@ -132,10 +93,10 @@
 			this.btnlimpiarbuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnlimpiarbuscador.IconSize = 16;
 			this.btnlimpiarbuscador.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnlimpiarbuscador.Location = new System.Drawing.Point(578, 49);
+			this.btnlimpiarbuscador.Location = new System.Drawing.Point(577, 49);
 			this.btnlimpiarbuscador.Name = "btnlimpiarbuscador";
 			this.btnlimpiarbuscador.Size = new System.Drawing.Size(69, 27);
-			this.btnlimpiarbuscador.TabIndex = 30;
+			this.btnlimpiarbuscador.TabIndex = 57;
 			this.btnlimpiarbuscador.Text = "Limpiar";
 			this.btnlimpiarbuscador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnlimpiarbuscador.UseVisualStyleBackColor = false;
@@ -153,16 +114,55 @@
 			this.btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnbuscar.IconSize = 16;
 			this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnbuscar.Location = new System.Drawing.Point(578, 17);
+			this.btnbuscar.Location = new System.Drawing.Point(577, 17);
 			this.btnbuscar.Name = "btnbuscar";
 			this.btnbuscar.Size = new System.Drawing.Size(69, 27);
-			this.btnbuscar.TabIndex = 29;
+			this.btnbuscar.TabIndex = 56;
 			this.btnbuscar.Text = "Buscar";
 			this.btnbuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnbuscar.UseVisualStyleBackColor = false;
 			this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
 			// 
-			// mdProveedor
+			// txtbusqueda
+			// 
+			this.txtbusqueda.Location = new System.Drawing.Point(364, 53);
+			this.txtbusqueda.Name = "txtbusqueda";
+			this.txtbusqueda.Size = new System.Drawing.Size(207, 20);
+			this.txtbusqueda.TabIndex = 55;
+			// 
+			// cbobusqueda
+			// 
+			this.cbobusqueda.FormattingEnabled = true;
+			this.cbobusqueda.Location = new System.Drawing.Point(364, 21);
+			this.cbobusqueda.Name = "cbobusqueda";
+			this.cbobusqueda.Size = new System.Drawing.Size(207, 21);
+			this.cbobusqueda.TabIndex = 54;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.BackColor = System.Drawing.Color.White;
+			this.label10.Location = new System.Drawing.Point(297, 24);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(61, 13);
+			this.label10.TabIndex = 53;
+			this.label10.Text = "Buscar por:";
+			// 
+			// Documento
+			// 
+			this.Documento.HeaderText = "Nro Documento";
+			this.Documento.Name = "Documento";
+			this.Documento.ReadOnly = true;
+			this.Documento.Width = 150;
+			// 
+			// NombreCompleto
+			// 
+			this.NombreCompleto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.NombreCompleto.HeaderText = "Nombre Completo";
+			this.NombreCompleto.Name = "NombreCompleto";
+			this.NombreCompleto.ReadOnly = true;
+			// 
+			// mdCliente
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,10 +174,10 @@
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.dgvdata);
 			this.Controls.Add(this.label9);
-			this.Name = "mdProveedor";
+			this.Name = "mdCliente";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Proveedores";
-			this.Load += new System.EventHandler(this.mdProveedor_Load);
+			this.Text = "mdCliente";
+			this.Load += new System.EventHandler(this.mdCliente_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -193,8 +193,7 @@
 		private System.Windows.Forms.TextBox txtbusqueda;
 		private System.Windows.Forms.ComboBox cbobusqueda;
 		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Id;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
+		private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
 	}
 }

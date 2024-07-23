@@ -98,7 +98,6 @@ namespace CapaPresentacion
 					txtproducto.Text = "";
 				}
 			}
-
 		}
 
 		private void btnagregarproducto_Click(object sender, EventArgs e)
