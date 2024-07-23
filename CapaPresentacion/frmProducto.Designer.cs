@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.txtIndice = new System.Windows.Forms.TextBox();
 			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
 			this.btnbuscar = new FontAwesome.Sharp.IconButton();
@@ -65,7 +65,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.iconButton1 = new FontAwesome.Sharp.IconButton();
+			this.btndescargarexcel = new FontAwesome.Sharp.IconButton();
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -107,7 +107,7 @@
 			this.btnbuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnbuscar.ForeColor = System.Drawing.Color.Black;
-			this.btnbuscar.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+			this.btnbuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
 			this.btnbuscar.IconColor = System.Drawing.Color.Black;
 			this.btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnbuscar.IconSize = 16;
@@ -217,7 +217,7 @@
 			this.btnguardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnguardar.ForeColor = System.Drawing.Color.White;
-			this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.CheckSquare;
+			this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
 			this.btnguardar.IconColor = System.Drawing.Color.White;
 			this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnguardar.IconSize = 18;
@@ -235,15 +235,15 @@
 			// 
 			this.dgvdata.AllowUserToAddRows = false;
 			this.dgvdata.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -262,9 +262,9 @@
 			this.dgvdata.MultiSelect = false;
 			this.dgvdata.Name = "dgvdata";
 			this.dgvdata.ReadOnly = true;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-			this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+			this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvdata.RowTemplate.Height = 28;
 			this.dgvdata.Size = new System.Drawing.Size(840, 397);
 			this.dgvdata.TabIndex = 45;
@@ -447,33 +447,33 @@
 			this.label1.Size = new System.Drawing.Size(207, 496);
 			this.label1.TabIndex = 27;
 			// 
-			// iconButton1
+			// btndescargarexcel
 			// 
-			this.iconButton1.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.iconButton1.ForeColor = System.Drawing.Color.Black;
-			this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
-			this.iconButton1.IconColor = System.Drawing.Color.Black;
-			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.iconButton1.IconSize = 16;
-			this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.iconButton1.Location = new System.Drawing.Point(227, 46);
-			this.iconButton1.Name = "iconButton1";
-			this.iconButton1.Size = new System.Drawing.Size(119, 27);
-			this.iconButton1.TabIndex = 54;
-			this.iconButton1.Text = "Descargar Excel";
-			this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.iconButton1.UseVisualStyleBackColor = false;
-			this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+			this.btndescargarexcel.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btndescargarexcel.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btndescargarexcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.btndescargarexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btndescargarexcel.ForeColor = System.Drawing.Color.Black;
+			this.btndescargarexcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+			this.btndescargarexcel.IconColor = System.Drawing.Color.Green;
+			this.btndescargarexcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btndescargarexcel.IconSize = 16;
+			this.btndescargarexcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btndescargarexcel.Location = new System.Drawing.Point(227, 46);
+			this.btndescargarexcel.Name = "btndescargarexcel";
+			this.btndescargarexcel.Size = new System.Drawing.Size(119, 27);
+			this.btndescargarexcel.TabIndex = 54;
+			this.btndescargarexcel.Text = "Descargar Excel";
+			this.btndescargarexcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btndescargarexcel.UseVisualStyleBackColor = false;
+			this.btndescargarexcel.Click += new System.EventHandler(this.btndescargarexcel_Click);
 			// 
 			// frmProducto
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1064, 496);
-			this.Controls.Add(this.iconButton1);
+			this.Controls.Add(this.btndescargarexcel);
 			this.Controls.Add(this.txtIndice);
 			this.Controls.Add(this.btnlimpiarbuscador);
 			this.Controls.Add(this.btnbuscar);
@@ -543,6 +543,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
 		private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-		private FontAwesome.Sharp.IconButton iconButton1;
+		private FontAwesome.Sharp.IconButton btndescargarexcel;
 	}
 }

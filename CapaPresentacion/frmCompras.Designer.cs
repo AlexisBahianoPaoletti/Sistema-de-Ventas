@@ -166,7 +166,7 @@
 			this.btnbuscarproveedor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.btnbuscarproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnbuscarproveedor.ForeColor = System.Drawing.Color.Black;
-			this.btnbuscarproveedor.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+			this.btnbuscarproveedor.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
 			this.btnbuscarproveedor.IconColor = System.Drawing.Color.Black;
 			this.btnbuscarproveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnbuscarproveedor.IconSize = 16;
@@ -310,7 +310,7 @@
 			this.btnbuscarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.btnbuscarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnbuscarproducto.ForeColor = System.Drawing.Color.Black;
-			this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+			this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
 			this.btnbuscarproducto.IconColor = System.Drawing.Color.Black;
 			this.btnbuscarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnbuscarproducto.IconSize = 16;

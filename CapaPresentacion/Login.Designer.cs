@@ -138,7 +138,7 @@
 			this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCancelar.ForeColor = System.Drawing.Color.White;
-			this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+			this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
 			this.btnCancelar.IconColor = System.Drawing.Color.White;
 			this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnCancelar.IconSize = 21;

@@ -279,7 +279,7 @@ namespace CapaPresentacion
 			}
 		}
 
-		private void iconButton1_Click(object sender, EventArgs e)
+		private void btndescargarexcel_Click(object sender, EventArgs e)
 		{
 			if (dgvdata.Rows.Count < 1)
 			{
@@ -297,12 +297,12 @@ namespace CapaPresentacion
 
 				foreach (DataGridViewRow row in dgvdata.Rows)
 				{
-					if(row.Visible)
+					if (row.Visible)
 						dt.Rows.Add(new object[]
 						{
 							row.Cells[2].Value.ToString(),
 							row.Cells[3].Value.ToString(),
-							row.Cells[4].Value.ToString(),						
+							row.Cells[4].Value.ToString(),
 							row.Cells[6].Value.ToString(),
 							row.Cells[7].Value.ToString(),
 							row.Cells[8].Value.ToString(),
@@ -326,16 +326,14 @@ namespace CapaPresentacion
 						wb.SaveAs(savefile.FileName);
 						MessageBox.Show("Reporte generado.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
-					catch 
+					catch
 					{
 						MessageBox.Show("Error al generar el reporte.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-						
+
 					}
 				}
 
 			}
 		}
-
-
 	}
 }

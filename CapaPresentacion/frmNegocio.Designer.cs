@@ -130,7 +130,7 @@
 			this.btnguardar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.Check;
+			this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
 			this.btnguardar.IconColor = System.Drawing.Color.Black;
 			this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnguardar.IconSize = 18;
