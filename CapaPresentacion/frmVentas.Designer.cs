@@ -62,7 +62,7 @@
 			this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.btneliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.btnregistrar = new FontAwesome.Sharp.IconButton();
+			this.btncrearventa = new FontAwesome.Sharp.IconButton();
 			this.txttotalpagar = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
 			this.txtpagacon = new System.Windows.Forms.TextBox();
@@ -447,21 +447,22 @@
 			this.btneliminar.ReadOnly = true;
 			this.btneliminar.Width = 50;
 			// 
-			// btnregistrar
+			// btncrearventa
 			// 
-			this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnregistrar.IconChar = FontAwesome.Sharp.IconChar.Tag;
-			this.btnregistrar.IconColor = System.Drawing.Color.DodgerBlue;
-			this.btnregistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnregistrar.IconSize = 40;
-			this.btnregistrar.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-			this.btnregistrar.Location = new System.Drawing.Point(741, 581);
-			this.btnregistrar.Name = "btnregistrar";
-			this.btnregistrar.Size = new System.Drawing.Size(151, 54);
-			this.btnregistrar.TabIndex = 38;
-			this.btnregistrar.Text = "REGISTRAR";
-			this.btnregistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnregistrar.UseVisualStyleBackColor = true;
+			this.btncrearventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btncrearventa.IconChar = FontAwesome.Sharp.IconChar.Tag;
+			this.btncrearventa.IconColor = System.Drawing.Color.DodgerBlue;
+			this.btncrearventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btncrearventa.IconSize = 40;
+			this.btncrearventa.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.btncrearventa.Location = new System.Drawing.Point(741, 581);
+			this.btncrearventa.Name = "btncrearventa";
+			this.btncrearventa.Size = new System.Drawing.Size(151, 54);
+			this.btncrearventa.TabIndex = 38;
+			this.btncrearventa.Text = "VENDER";
+			this.btncrearventa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btncrearventa.UseVisualStyleBackColor = true;
+			this.btncrearventa.Click += new System.EventHandler(this.btncrearventa_Click);
 			// 
 			// txttotalpagar
 			// 
@@ -537,7 +538,7 @@
 			this.Controls.Add(this.label12);
 			this.Controls.Add(this.txtcambio);
 			this.Controls.Add(this.txtpagacon);
-			this.Controls.Add(this.btnregistrar);
+			this.Controls.Add(this.btncrearventa);
 			this.Controls.Add(this.txttotalpagar);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.dgvdata);
@@ -592,7 +593,7 @@
 		private System.Windows.Forms.Label label1;
 		private FontAwesome.Sharp.IconButton btnagregarproducto;
 		private System.Windows.Forms.DataGridView dgvdata;
-		private FontAwesome.Sharp.IconButton btnregistrar;
+		private FontAwesome.Sharp.IconButton btncrearventa;
 		private System.Windows.Forms.TextBox txttotalpagar;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.TextBox txtpagacon;
