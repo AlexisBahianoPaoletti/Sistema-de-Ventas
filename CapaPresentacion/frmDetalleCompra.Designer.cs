@@ -358,7 +358,7 @@
 			this.Controls.Add(this.dgvdata);
 			this.Controls.Add(this.label9);
 			this.Name = "frmDetalleCompra";
-			this.Text = "frmDetalleCompra";
+			this.Text = "Detalles Compra";
 			this.Load += new System.EventHandler(this.frmDetalleCompra_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
 			this.groupBox1.ResumeLayout(false);

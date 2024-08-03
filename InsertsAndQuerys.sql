@@ -615,3 +615,16 @@
 
 --GO
 
+--select v.IdVenta, u.NombreCompleto, v.DocumentoCliente, v.NombreCliente, 
+--v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, 
+--CONVERT(char(10), v.FechaRegistro, 103) [FechaRegistro]
+--from VENTA v inner join USUARIO u on u.IdUsuario = v.IdUsuario
+--where v.NumeroDocumento = '00001'
+
+--GO
+
+--select p.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal
+--from DETALLE_VENTA dv inner join PRODUCTO p on p.IdProducto = dv.IdProducto
+--where dv.IdVenta = 1
+
+--GO
