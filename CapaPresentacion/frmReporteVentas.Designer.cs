@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-	partial class frmReportes
+	partial class frmReporteVentas
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,10 +28,17 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
+			this.SuspendLayout();
+			// 
+			// frmReporteVentas
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "frmReportes";
+			this.Name = "frmReporteVentas";
+			this.Text = "Reporte Ventas";
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion

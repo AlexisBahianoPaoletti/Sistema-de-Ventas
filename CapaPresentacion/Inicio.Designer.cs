@@ -49,6 +49,8 @@
 			this.contenedor = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lblUsuario = new System.Windows.Forms.Label();
+			this.submenureportecompras = new System.Windows.Forms.ToolStripMenuItem();
+			this.submenureporteventas = new System.Windows.Forms.ToolStripMenuItem();
 			this.menu.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -231,16 +233,18 @@
 			// menureportes
 			// 
 			this.menureportes.AutoSize = false;
+			this.menureportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenureportecompras,
+            this.submenureporteventas});
 			this.menureportes.IconChar = FontAwesome.Sharp.IconChar.BarChart;
 			this.menureportes.IconColor = System.Drawing.Color.Black;
 			this.menureportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.menureportes.IconSize = 50;
 			this.menureportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.menureportes.Name = "menureportes";
-			this.menureportes.Size = new System.Drawing.Size(80, 69);
+			this.menureportes.Size = new System.Drawing.Size(122, 69);
 			this.menureportes.Text = "Reportes";
 			this.menureportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			this.menureportes.Click += new System.EventHandler(this.menureportes_Click);
 			// 
 			// menuacercade
 			// 
@@ -310,6 +314,20 @@
 			this.lblUsuario.TabIndex = 5;
 			this.lblUsuario.Text = "lblUsuario";
 			// 
+			// submenureportecompras
+			// 
+			this.submenureportecompras.Name = "submenureportecompras";
+			this.submenureportecompras.Size = new System.Drawing.Size(180, 22);
+			this.submenureportecompras.Text = "Reporte Compras";
+			this.submenureportecompras.Click += new System.EventHandler(this.submenureportecompras_Click);
+			// 
+			// submenureporteventas
+			// 
+			this.submenureporteventas.Name = "submenureporteventas";
+			this.submenureporteventas.Size = new System.Drawing.Size(180, 22);
+			this.submenureporteventas.Text = "Reporte Ventas";
+			this.submenureporteventas.Click += new System.EventHandler(this.submenureporteventas_Click);
+			// 
 			// Inicio
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +374,8 @@
 		private FontAwesome.Sharp.IconMenuItem submenuregistrarcompra;
 		private FontAwesome.Sharp.IconMenuItem submenuverdetallecompra;
 		private System.Windows.Forms.ToolStripMenuItem submenunegocio;
+		private System.Windows.Forms.ToolStripMenuItem submenureportecompras;
+		private System.Windows.Forms.ToolStripMenuItem submenureporteventas;
 	}
 }
 
