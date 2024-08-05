@@ -40,11 +40,6 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.dgvdata = new System.Windows.Forms.DataGridView();
-			this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
 			this.btnbuscar = new FontAwesome.Sharp.IconButton();
 			this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +51,11 @@
 			this.txtdescripcion = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
+			this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -150,6 +150,7 @@
 			// dgvdata
 			// 
 			this.dgvdata.AllowUserToAddRows = false;
+			this.dgvdata.BackgroundColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,40 +179,6 @@
 			this.dgvdata.TabIndex = 53;
 			this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
 			this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
-			// 
-			// btnseleccionar
-			// 
-			this.btnseleccionar.HeaderText = "";
-			this.btnseleccionar.Name = "btnseleccionar";
-			this.btnseleccionar.ReadOnly = true;
-			this.btnseleccionar.Width = 30;
-			// 
-			// Id
-			// 
-			this.Id.HeaderText = "Id";
-			this.Id.Name = "Id";
-			this.Id.ReadOnly = true;
-			this.Id.Visible = false;
-			// 
-			// Descripcion
-			// 
-			this.Descripcion.HeaderText = "Descripción";
-			this.Descripcion.Name = "Descripcion";
-			this.Descripcion.ReadOnly = true;
-			this.Descripcion.Width = 150;
-			// 
-			// EstadoValor
-			// 
-			this.EstadoValor.HeaderText = "EstadoValor";
-			this.EstadoValor.Name = "EstadoValor";
-			this.EstadoValor.ReadOnly = true;
-			this.EstadoValor.Visible = false;
-			// 
-			// Estado
-			// 
-			this.Estado.HeaderText = "Estado";
-			this.Estado.Name = "Estado";
-			this.Estado.ReadOnly = true;
 			// 
 			// btnlimpiarbuscador
 			// 
@@ -374,6 +341,41 @@
 			this.label13.TabIndex = 63;
 			this.label13.Text = "Descripción:";
 			// 
+			// btnseleccionar
+			// 
+			this.btnseleccionar.HeaderText = "";
+			this.btnseleccionar.Name = "btnseleccionar";
+			this.btnseleccionar.ReadOnly = true;
+			this.btnseleccionar.Width = 30;
+			// 
+			// Id
+			// 
+			this.Id.HeaderText = "Id";
+			this.Id.Name = "Id";
+			this.Id.ReadOnly = true;
+			this.Id.Visible = false;
+			// 
+			// Descripcion
+			// 
+			this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Descripcion.HeaderText = "Descripción";
+			this.Descripcion.Name = "Descripcion";
+			this.Descripcion.ReadOnly = true;
+			// 
+			// EstadoValor
+			// 
+			this.EstadoValor.HeaderText = "EstadoValor";
+			this.EstadoValor.Name = "EstadoValor";
+			this.EstadoValor.ReadOnly = true;
+			this.EstadoValor.Visible = false;
+			// 
+			// Estado
+			// 
+			this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Estado.HeaderText = "Estado";
+			this.Estado.Name = "Estado";
+			this.Estado.ReadOnly = true;
+			// 
 			// frmCategoria
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,11 +424,6 @@
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.DataGridView dgvdata;
-		private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-		private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtid;
 		private FontAwesome.Sharp.IconButton btneliminar;
@@ -436,5 +433,10 @@
 		private System.Windows.Forms.TextBox txtdescripcion;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+		private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
 	}
 }

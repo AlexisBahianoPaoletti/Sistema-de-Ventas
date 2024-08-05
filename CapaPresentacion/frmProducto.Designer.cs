@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.txtIndice = new System.Windows.Forms.TextBox();
 			this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
 			this.btnbuscar = new FontAwesome.Sharp.IconButton();
@@ -91,7 +91,7 @@
 			this.btnlimpiarbuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnlimpiarbuscador.IconSize = 16;
 			this.btnlimpiarbuscador.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnlimpiarbuscador.Location = new System.Drawing.Point(983, 49);
+			this.btnlimpiarbuscador.Location = new System.Drawing.Point(1067, 49);
 			this.btnlimpiarbuscador.Name = "btnlimpiarbuscador";
 			this.btnlimpiarbuscador.Size = new System.Drawing.Size(69, 27);
 			this.btnlimpiarbuscador.TabIndex = 52;
@@ -112,7 +112,7 @@
 			this.btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnbuscar.IconSize = 16;
 			this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnbuscar.Location = new System.Drawing.Point(983, 17);
+			this.btnbuscar.Location = new System.Drawing.Point(1067, 17);
 			this.btnbuscar.Name = "btnbuscar";
 			this.btnbuscar.Size = new System.Drawing.Size(69, 27);
 			this.btnbuscar.TabIndex = 51;
@@ -123,7 +123,7 @@
 			// 
 			// txtbusqueda
 			// 
-			this.txtbusqueda.Location = new System.Drawing.Point(770, 53);
+			this.txtbusqueda.Location = new System.Drawing.Point(854, 53);
 			this.txtbusqueda.Name = "txtbusqueda";
 			this.txtbusqueda.Size = new System.Drawing.Size(207, 20);
 			this.txtbusqueda.TabIndex = 50;
@@ -131,7 +131,7 @@
 			// cbobusqueda
 			// 
 			this.cbobusqueda.FormattingEnabled = true;
-			this.cbobusqueda.Location = new System.Drawing.Point(770, 21);
+			this.cbobusqueda.Location = new System.Drawing.Point(854, 21);
 			this.cbobusqueda.Name = "cbobusqueda";
 			this.cbobusqueda.Size = new System.Drawing.Size(207, 21);
 			this.cbobusqueda.TabIndex = 49;
@@ -140,7 +140,7 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.BackColor = System.Drawing.Color.White;
-			this.label10.Location = new System.Drawing.Point(703, 24);
+			this.label10.Location = new System.Drawing.Point(787, 24);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(61, 13);
 			this.label10.TabIndex = 48;
@@ -164,7 +164,7 @@
 			this.label9.Location = new System.Drawing.Point(218, 9);
 			this.label9.Name = "label9";
 			this.label9.Padding = new System.Windows.Forms.Padding(2, 6, 0, 0);
-			this.label9.Size = new System.Drawing.Size(840, 73);
+			this.label9.Size = new System.Drawing.Size(924, 73);
 			this.label9.TabIndex = 46;
 			this.label9.Text = "Lista de Productos";
 			// 
@@ -235,15 +235,15 @@
 			// 
 			this.dgvdata.AllowUserToAddRows = false;
 			this.dgvdata.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -262,11 +262,11 @@
 			this.dgvdata.MultiSelect = false;
 			this.dgvdata.Name = "dgvdata";
 			this.dgvdata.ReadOnly = true;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-			this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+			this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvdata.RowTemplate.Height = 28;
-			this.dgvdata.Size = new System.Drawing.Size(840, 397);
+			this.dgvdata.Size = new System.Drawing.Size(924, 397);
 			this.dgvdata.TabIndex = 45;
 			this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
 			this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
@@ -472,7 +472,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1064, 496);
+			this.ClientSize = new System.Drawing.Size(1148, 496);
 			this.Controls.Add(this.btndescargarexcel);
 			this.Controls.Add(this.txtIndice);
 			this.Controls.Add(this.btnlimpiarbuscador);

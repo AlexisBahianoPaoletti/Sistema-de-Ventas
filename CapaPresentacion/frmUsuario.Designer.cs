@@ -46,16 +46,6 @@
 			this.cborol = new System.Windows.Forms.ComboBox();
 			this.cboestado = new System.Windows.Forms.ComboBox();
 			this.dgvdata = new System.Windows.Forms.DataGridView();
-			this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.IdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label9 = new System.Windows.Forms.Label();
 			this.txtid = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
@@ -67,6 +57,16 @@
 			this.btnlimpiar = new FontAwesome.Sharp.IconButton();
 			this.btnguardar = new FontAwesome.Sharp.IconButton();
 			this.txtIndice = new System.Windows.Forms.TextBox();
+			this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.IdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -207,6 +207,7 @@
 			// dgvdata
 			// 
 			this.dgvdata.AllowUserToAddRows = false;
+			this.dgvdata.BackgroundColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,74 +241,6 @@
 			this.dgvdata.TabIndex = 18;
 			this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
 			this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
-			// 
-			// btnseleccionar
-			// 
-			this.btnseleccionar.HeaderText = "";
-			this.btnseleccionar.Name = "btnseleccionar";
-			this.btnseleccionar.ReadOnly = true;
-			this.btnseleccionar.Width = 30;
-			// 
-			// Id
-			// 
-			this.Id.HeaderText = "IdUsuario";
-			this.Id.Name = "Id";
-			this.Id.ReadOnly = true;
-			this.Id.Visible = false;
-			// 
-			// Documento
-			// 
-			this.Documento.HeaderText = "Nro Documento";
-			this.Documento.Name = "Documento";
-			this.Documento.ReadOnly = true;
-			this.Documento.Width = 150;
-			// 
-			// NombreCompleto
-			// 
-			this.NombreCompleto.HeaderText = "Nombre Completo";
-			this.NombreCompleto.Name = "NombreCompleto";
-			this.NombreCompleto.ReadOnly = true;
-			this.NombreCompleto.Width = 180;
-			// 
-			// Correo
-			// 
-			this.Correo.HeaderText = "Correo";
-			this.Correo.Name = "Correo";
-			this.Correo.ReadOnly = true;
-			this.Correo.Width = 150;
-			// 
-			// Clave
-			// 
-			this.Clave.HeaderText = "Clave";
-			this.Clave.Name = "Clave";
-			this.Clave.ReadOnly = true;
-			this.Clave.Visible = false;
-			// 
-			// IdRol
-			// 
-			this.IdRol.HeaderText = "Id Rol";
-			this.IdRol.Name = "IdRol";
-			this.IdRol.ReadOnly = true;
-			this.IdRol.Visible = false;
-			// 
-			// Rol
-			// 
-			this.Rol.HeaderText = "Rol";
-			this.Rol.Name = "Rol";
-			this.Rol.ReadOnly = true;
-			// 
-			// EstadoValor
-			// 
-			this.EstadoValor.HeaderText = "EstadoValor";
-			this.EstadoValor.Name = "EstadoValor";
-			this.EstadoValor.ReadOnly = true;
-			this.EstadoValor.Visible = false;
-			// 
-			// Estado
-			// 
-			this.Estado.HeaderText = "Estado";
-			this.Estado.Name = "Estado";
-			this.Estado.ReadOnly = true;
 			// 
 			// label9
 			// 
@@ -472,11 +405,79 @@
 			this.txtIndice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtIndice.Visible = false;
 			// 
+			// btnseleccionar
+			// 
+			this.btnseleccionar.HeaderText = "";
+			this.btnseleccionar.Name = "btnseleccionar";
+			this.btnseleccionar.ReadOnly = true;
+			this.btnseleccionar.Width = 30;
+			// 
+			// Id
+			// 
+			this.Id.HeaderText = "IdUsuario";
+			this.Id.Name = "Id";
+			this.Id.ReadOnly = true;
+			this.Id.Visible = false;
+			// 
+			// Documento
+			// 
+			this.Documento.HeaderText = "Nro Documento";
+			this.Documento.Name = "Documento";
+			this.Documento.ReadOnly = true;
+			this.Documento.Width = 150;
+			// 
+			// NombreCompleto
+			// 
+			this.NombreCompleto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.NombreCompleto.HeaderText = "Nombre Completo";
+			this.NombreCompleto.Name = "NombreCompleto";
+			this.NombreCompleto.ReadOnly = true;
+			// 
+			// Correo
+			// 
+			this.Correo.HeaderText = "Correo";
+			this.Correo.Name = "Correo";
+			this.Correo.ReadOnly = true;
+			this.Correo.Width = 150;
+			// 
+			// Clave
+			// 
+			this.Clave.HeaderText = "Clave";
+			this.Clave.Name = "Clave";
+			this.Clave.ReadOnly = true;
+			this.Clave.Visible = false;
+			// 
+			// IdRol
+			// 
+			this.IdRol.HeaderText = "Id Rol";
+			this.IdRol.Name = "IdRol";
+			this.IdRol.ReadOnly = true;
+			this.IdRol.Visible = false;
+			// 
+			// Rol
+			// 
+			this.Rol.HeaderText = "Rol";
+			this.Rol.Name = "Rol";
+			this.Rol.ReadOnly = true;
+			// 
+			// EstadoValor
+			// 
+			this.EstadoValor.HeaderText = "EstadoValor";
+			this.EstadoValor.Name = "EstadoValor";
+			this.EstadoValor.ReadOnly = true;
+			this.EstadoValor.Visible = false;
+			// 
+			// Estado
+			// 
+			this.Estado.HeaderText = "Estado";
+			this.Estado.Name = "Estado";
+			this.Estado.ReadOnly = true;
+			// 
 			// frmUsuario
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Black;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(1064, 496);
 			this.Controls.Add(this.txtIndice);
 			this.Controls.Add(this.btnlimpiarbuscador);
@@ -506,6 +507,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "frmUsuario";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Usuarios";
 			this.Load += new System.EventHandler(this.frmUsuario_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
@@ -542,6 +544,7 @@
 		private System.Windows.Forms.TextBox txtbusqueda;
 		private FontAwesome.Sharp.IconButton btnlimpiarbuscador;
 		private FontAwesome.Sharp.IconButton btnbuscar;
+		private System.Windows.Forms.TextBox txtIndice;
 		private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Id;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
@@ -552,6 +555,5 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
 		private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-		private System.Windows.Forms.TextBox txtIndice;
 	}
 }

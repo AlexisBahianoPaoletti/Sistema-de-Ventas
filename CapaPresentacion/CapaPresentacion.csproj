@@ -350,5 +350,8 @@
   <ItemGroup>
     <None Include="Resources\PlantillaVenta.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AP limpio.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,14 +42,6 @@
 			this.btnlimpiar = new FontAwesome.Sharp.IconButton();
 			this.btnguardar = new FontAwesome.Sharp.IconButton();
 			this.dgvdata = new System.Windows.Forms.DataGridView();
-			this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cboestado = new System.Windows.Forms.ComboBox();
 			this.txttelefono = new System.Windows.Forms.TextBox();
 			this.txtcorreo = new System.Windows.Forms.TextBox();
@@ -62,6 +54,14 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
+			this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -264,60 +264,6 @@
 			this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
 			this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
 			// 
-			// btnseleccionar
-			// 
-			this.btnseleccionar.HeaderText = "";
-			this.btnseleccionar.Name = "btnseleccionar";
-			this.btnseleccionar.ReadOnly = true;
-			this.btnseleccionar.Width = 30;
-			// 
-			// Id
-			// 
-			this.Id.HeaderText = "Id";
-			this.Id.Name = "Id";
-			this.Id.ReadOnly = true;
-			this.Id.Visible = false;
-			// 
-			// Documento
-			// 
-			this.Documento.HeaderText = "Nro Documento";
-			this.Documento.Name = "Documento";
-			this.Documento.ReadOnly = true;
-			this.Documento.Width = 150;
-			// 
-			// RazonSocial
-			// 
-			this.RazonSocial.HeaderText = "Razon Social";
-			this.RazonSocial.Name = "RazonSocial";
-			this.RazonSocial.ReadOnly = true;
-			this.RazonSocial.Width = 180;
-			// 
-			// Correo
-			// 
-			this.Correo.HeaderText = "Correo";
-			this.Correo.Name = "Correo";
-			this.Correo.ReadOnly = true;
-			this.Correo.Width = 150;
-			// 
-			// Telefono
-			// 
-			this.Telefono.HeaderText = "Telefono";
-			this.Telefono.Name = "Telefono";
-			this.Telefono.ReadOnly = true;
-			// 
-			// EstadoValor
-			// 
-			this.EstadoValor.HeaderText = "EstadoValor";
-			this.EstadoValor.Name = "EstadoValor";
-			this.EstadoValor.ReadOnly = true;
-			this.EstadoValor.Visible = false;
-			// 
-			// Estado
-			// 
-			this.Estado.HeaderText = "Estado";
-			this.Estado.Name = "Estado";
-			this.Estado.ReadOnly = true;
-			// 
 			// cboestado
 			// 
 			this.cboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -425,6 +371,60 @@
 			this.label6.TabIndex = 77;
 			this.label6.Text = "Nro Documento:";
 			// 
+			// btnseleccionar
+			// 
+			this.btnseleccionar.HeaderText = "";
+			this.btnseleccionar.Name = "btnseleccionar";
+			this.btnseleccionar.ReadOnly = true;
+			this.btnseleccionar.Width = 30;
+			// 
+			// Id
+			// 
+			this.Id.HeaderText = "Id";
+			this.Id.Name = "Id";
+			this.Id.ReadOnly = true;
+			this.Id.Visible = false;
+			// 
+			// Documento
+			// 
+			this.Documento.HeaderText = "Nro Documento";
+			this.Documento.Name = "Documento";
+			this.Documento.ReadOnly = true;
+			this.Documento.Width = 150;
+			// 
+			// RazonSocial
+			// 
+			this.RazonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.RazonSocial.HeaderText = "Razon Social";
+			this.RazonSocial.Name = "RazonSocial";
+			this.RazonSocial.ReadOnly = true;
+			// 
+			// Correo
+			// 
+			this.Correo.HeaderText = "Correo";
+			this.Correo.Name = "Correo";
+			this.Correo.ReadOnly = true;
+			this.Correo.Width = 150;
+			// 
+			// Telefono
+			// 
+			this.Telefono.HeaderText = "Telefono";
+			this.Telefono.Name = "Telefono";
+			this.Telefono.ReadOnly = true;
+			// 
+			// EstadoValor
+			// 
+			this.EstadoValor.HeaderText = "EstadoValor";
+			this.EstadoValor.Name = "EstadoValor";
+			this.EstadoValor.ReadOnly = true;
+			this.EstadoValor.Visible = false;
+			// 
+			// Estado
+			// 
+			this.Estado.HeaderText = "Estado";
+			this.Estado.Name = "Estado";
+			this.Estado.ReadOnly = true;
+			// 
 			// frmProveedores
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,6 +488,7 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Id;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
@@ -496,6 +497,5 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
 		private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-		private System.Windows.Forms.Label label6;
 	}
 }

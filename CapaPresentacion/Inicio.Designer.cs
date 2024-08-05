@@ -51,6 +51,7 @@
 			this.contenedor = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lblUsuario = new System.Windows.Forms.Label();
+			this.btnsalir = new FontAwesome.Sharp.IconButton();
 			this.menu.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -68,7 +69,7 @@
             this.menuacercade});
 			this.menu.Location = new System.Drawing.Point(0, 64);
 			this.menu.Name = "menu";
-			this.menu.Size = new System.Drawing.Size(1221, 73);
+			this.menu.Size = new System.Drawing.Size(1509, 73);
 			this.menu.TabIndex = 0;
 			this.menu.Text = "menuStrip1";
 			// 
@@ -281,7 +282,7 @@
 			this.menuTitulo.Location = new System.Drawing.Point(0, 0);
 			this.menuTitulo.Name = "menuTitulo";
 			this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.menuTitulo.Size = new System.Drawing.Size(1221, 64);
+			this.menuTitulo.Size = new System.Drawing.Size(1509, 64);
 			this.menuTitulo.TabIndex = 1;
 			this.menuTitulo.Text = "menuStrip1";
 			// 
@@ -302,7 +303,7 @@
 			this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.contenedor.Location = new System.Drawing.Point(0, 137);
 			this.contenedor.Name = "contenedor";
-			this.contenedor.Size = new System.Drawing.Size(1221, 499);
+			this.contenedor.Size = new System.Drawing.Size(1509, 699);
 			this.contenedor.TabIndex = 3;
 			// 
 			// label2
@@ -311,7 +312,7 @@
 			this.label2.BackColor = System.Drawing.Color.DodgerBlue;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(934, 22);
+			this.label2.Location = new System.Drawing.Point(1204, 24);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(61, 17);
 			this.label2.TabIndex = 4;
@@ -323,17 +324,35 @@
 			this.lblUsuario.BackColor = System.Drawing.Color.DodgerBlue;
 			this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblUsuario.ForeColor = System.Drawing.Color.White;
-			this.lblUsuario.Location = new System.Drawing.Point(990, 22);
+			this.lblUsuario.Location = new System.Drawing.Point(1260, 24);
 			this.lblUsuario.Name = "lblUsuario";
-			this.lblUsuario.Size = new System.Drawing.Size(71, 17);
+			this.lblUsuario.Size = new System.Drawing.Size(68, 17);
 			this.lblUsuario.TabIndex = 5;
-			this.lblUsuario.Text = "lblUsuario";
+			this.lblUsuario.Text = "ldUsuario";
+			// 
+			// btnsalir
+			// 
+			this.btnsalir.BackColor = System.Drawing.Color.DodgerBlue;
+			this.btnsalir.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+			this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnsalir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+			this.btnsalir.IconColor = System.Drawing.Color.Black;
+			this.btnsalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnsalir.IconSize = 50;
+			this.btnsalir.Location = new System.Drawing.Point(1450, 3);
+			this.btnsalir.Name = "btnsalir";
+			this.btnsalir.Padding = new System.Windows.Forms.Padding(4, 6, 0, 0);
+			this.btnsalir.Size = new System.Drawing.Size(59, 58);
+			this.btnsalir.TabIndex = 6;
+			this.btnsalir.UseVisualStyleBackColor = false;
+			this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
 			// 
 			// Inicio
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1221, 636);
+			this.ClientSize = new System.Drawing.Size(1509, 836);
+			this.Controls.Add(this.btnsalir);
 			this.Controls.Add(this.lblUsuario);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.contenedor);
@@ -377,6 +396,7 @@
 		private System.Windows.Forms.ToolStripMenuItem submenunegocio;
 		private System.Windows.Forms.ToolStripMenuItem submenureportecompras;
 		private System.Windows.Forms.ToolStripMenuItem submenureporteventas;
+		private FontAwesome.Sharp.IconButton btnsalir;
 	}
 }
 

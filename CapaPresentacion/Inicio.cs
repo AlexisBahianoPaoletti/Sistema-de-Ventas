@@ -137,5 +137,10 @@ namespace CapaPresentacion
 			mdAcercade md = new mdAcercade();
 			md.ShowDialog();
 		}
+
+		private void btnsalir_Click(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("¿Desea salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) { this.Close(); }
+		}
 	}
 }
